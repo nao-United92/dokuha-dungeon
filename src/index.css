@@ -1,3 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Lato:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: #1a1a1a;
+    background-image: radial-gradient(circle, #2c2c2c, #1a1a1a 70%);
+    color: #e5e7eb; /* default text color: gray-200 */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'IM Fell English', serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+}
+
+@layer components {
+  .card {
+    @apply p-6 bg-slate-800 rounded-xl shadow-2xl;
+  }
+  
+  .input-field {
+      @apply p-3 rounded-lg bg-slate-900 text-gray-200 placeholder-gray-400 border border-slate-700 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-colors;
+  }
+}
+
+/* Webkit Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5a5a5a;
+  border-radius: 6px;
+  border: 3px solid #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #7a7a7a;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}

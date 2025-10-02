@@ -35,28 +35,28 @@ const RegisterBook = () => {
   };
 
   return (
-    <div className="p-6 bg-gray-800 rounded-lg shadow-xl">
-      <h2 className="text-xl font-bold mb-4 text-white">新しい本を登録する</h2>
+    <div className="card">
+      <h2 className="text-2xl font-bold mb-4 text-amber-400">新しい本を追加する</h2>
       <form onSubmit={handleRegister} className="flex flex-col space-y-4">
         <input
           type="text"
           placeholder="本のタイトル"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400"
+          className="input-field w-full"
         />
         <input
           type="number"
           placeholder="総ページ数"
           value={totalPages}
           onChange={(e) => setTotalPages(parseInt(e.target.value))}
-          className="p-3 rounded-md bg-gray-700 text-white placeholder-gray-400"
+          className="input-field w-full"
         />
         <button
           type="submit"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-md transition duration-300"
+          className="bg-gradient-to-r from-green-400 to-teal-500 hover:from-green-500 hover:to-teal-600 text-white font-bold py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
         >
-          登録
+          追加する
         </button>
       </form>
     </div>
